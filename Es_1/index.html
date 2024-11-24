@@ -7,23 +7,33 @@
     <title>ApulianTaste</title>
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- GOOGLE FONTS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Inizio NavBar Vanilla -->
+    <!-- NavBar -->
     <div class="NavBar-container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary NavBar">
-            <!-- Logo Blog -->
-            <img src="/Es_1/img/NavLogo.png" alt="" class="NavLogo">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">ApulianTaste</a>
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="/Es_1/img/NavLogo.png" alt="Logo" class="NavLogo me-2">
+                    ApulianTaste
+                </a>
+                <!-- Bottone per mobile view -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Menu Collapse -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -31,57 +41,67 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Servizi
-                            </a>
+                                aria-expanded="false">Servizi</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Blog Ricette</a></li>
                                 <li><a class="dropdown-item" href="#">Recensioni Blog</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#">Altro</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
-                        <button class="btn btn-outline-warning" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <button class="btn btn-outline-warning" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg></button>
+                            </svg>
+                        </button>
                     </form>
                 </div>
             </div>
         </nav>
-
     </div>
+
+    <!-- Header -->
     <header>
-        <!-- Huge Header -->
         <div class="HugeHeader">
             <h1>ApulianTaste</h1>
             <section class="recipes">
                 <article>
-                    <h2>Le Sgagliozze</h2>
-                    <p>Tipiche di Bari, sono croccanti quadratini di polenta fritta, perfetti come spuntino o antipasto.
-                    </p>
+                    <a href="https://blog.giallozafferano.it/fablesucre/sgagliozze/">
+                        <h2>Le Sgagliozze</h2>
+                        <p>Croccanti quadratini di polenta fritta, tipici di Bari, ideali per uno spuntino o come
+                            antipasto sfizioso.</p>
+                    </a>
+                    <img src="/Es_1/img/articles/Sgagliozze-art.jpg" alt="Sgagliozze">
                 </article>
                 <article>
-                    <h2>Panino col Polpo</h2>
-                    <p>Un classico street food pugliese, con polpo arrostito e condito con olio, limone e prezzemolo.
-                    </p>
+                    <a href="https://blog.giallozafferano.it/ricettedilibellula/panino-con-polpo/">
+                        <h2>Panino col Polpo</h2>
+                        <p>Street food pugliese per eccellenza, con polpo arrostito e una combinazione di olio, limone e
+                            prezzemolo fresco.</p>
+                    </a>
+                    <img src="/Es_1/img/articles/Panino-con-Polpo-art.jpg" alt="Panino col Polpo">
                 </article>
                 <article>
-                    <h2>Focaccia Barese</h2>
-                    <p>Soffice e fragrante, condita con pomodorini, olive e origano, è uno dei simboli della tradizione
-                        pugliese.</p>
+                    <a href="https://blog.giallozafferano.it/lacucinasottosopra/focaccia-barese-ricetta-originale/">
+                        <h2>Focaccia Barese</h2>
+                        <p>Soffice, fragrante e ricca di sapori mediterranei, con pomodorini, olive e origano. Un
+                            classico intramontabile.</p>
+                    </a>
+                    <img src="/Es_1/img/articles/Focaccia-Barese-art.jpg" alt="Focaccia Barese">
                 </article>
             </section>
         </div>
     </header>
+
     <!-- BOOTSTRAP JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
