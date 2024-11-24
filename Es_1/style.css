@@ -1,0 +1,53 @@
+.NavLogo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(53, 48, 0) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-brand, .btn, .nav-link{
+        transition: 0.6s;
+    }
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color:#c79c00;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(255, 250, 90, 0.077);
+}
+
+.navbar-brand  {
+    color: #F5BE00;
+}
+
+.navbar-brand:hover{
+    color: #c79c00
+}
+
+.nav-link {
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-link {
+        color: #c79c00;
+    }
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #F5BE00;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: 0.6s;
+    }
+}
