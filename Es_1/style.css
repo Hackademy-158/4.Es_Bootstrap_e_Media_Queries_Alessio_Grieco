@@ -1,3 +1,4 @@
+/*  BOOTSTRAP START */
 .NavLogo {
     width: 80px;
     height: 80px;
@@ -51,3 +52,6 @@
         transition: 0.6s;
     }
 }
+
+/* BOOTSTRAP END */
+
