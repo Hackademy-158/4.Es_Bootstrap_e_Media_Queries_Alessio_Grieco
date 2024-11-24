@@ -1,62 +1,3 @@
-/* BOOTSTRAP START */
-.NavLogo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.bg-body-tertiary {
-    --bs-bg-opacity: 1;
-    background-color: rgb(53, 48, 0) !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    .navbar-brand,
-    .btn,
-    .nav-link {
-        transition: 0.6s;
-    }
-}
-
-.form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
-    border-color: #c79c00;
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(255, 250, 90, 0.077);
-}
-
-.navbar-brand {
-    color: #F5BE00;
-}
-
-.navbar-brand:hover {
-    color: #c79c00
-}
-
-.nav-link {}
-
-@media (prefers-reduced-motion: reduce) {
-    .nav-link {
-        color: #c79c00;
-    }
-}
-
-.nav-link:focus,
-.nav-link:hover {
-    color: #F5BE00;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .btn {
-        transition: 0.6s;
-    }
-}
-
-/* BOOTSTRAP END */
-
 /* Reset di base */
 body,
 h1,
@@ -73,36 +14,138 @@ article {
 /* Stile generale */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #ffecd1;
     color: #333;
     line-height: 1.6;
+}
+
+/* Navbar e Logo */
+.NavLogo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(53, 48, 0) !important;
+}
+
+.navbar-brand {
+    color: #F5BE00;
+}
+
+.navbar-brand:hover,
+.nav-link:focus,
+.nav-link:hover {
+    color: #c79c00;
+    transition: ease-in 0.2s;
+}
+
+.navbar-nav,
+.nav-link {
+    color: #F5BE00;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #F5BE00;
+}
+
+.dropdown-menu {
+    background-color: #3c3600;
+    padding: 0;
+    margin: 0;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color:#F5BE00;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(64, 57, 0, 0.25);
+}
+
+.btn:hover{
+    transition: ease-in 0.2s;
+    color: #c79c00;
+}
+
+.btn{
+    border-radius: 50%;
+}
+
+button,
+button:focus {
+    color: inherit;
+    border: none;
+    outline: none;
+}
+
+.dropdown-item {
+    color: #F5BE00;
+}
+
+.dropdown-item:hover {
+    color: #F5BE00;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler-collapsed,
+.navbar-toggler-collapsed:focus {
+    color: #3c360000;
+    border: none;
+    outline: none;
+}
+
+
+
+.navbar-toggler:hover,
+.navbar-toggler-collapsed:hover,
+.navbar-toggler-icon {
+    color: #c79c00;
+    transition: ease-in 0.2s;
+    border: none;
+    outline: none;
+}
+
+
+
+.button navbar-toggler:focus navbar-toggler-collapsed:focus {
+    border: 2px solid;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: #c79c00;
+    transition: ease-in 0.2s;
+}
+
+.hr {
+    color: #c79c00;
+}
+
+a {
+    color: #c79c00;
+    text-decoration: none;
 }
 
 /* Stile per HugeHeader */
 .HugeHeader {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 40px 20px;
     height: 100vh;
-    background-color: #ffecd1;
-    padding: 20px;
-    border-bottom: 5px solid #F5BE00;
+    width: 100%;
 }
 
-/* Stile del titolo */
-.HugeHeader h1 {
-    display: flex;
-    font-size: 64px;
-    font-family: "Borel", cursive;
-    color: #F5BE00;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Stile della sezione ricette */
+/* Stile per la sezione ricette */
 .recipes {
     display: flex;
     flex-wrap: wrap;
@@ -110,10 +153,9 @@ body {
     justify-content: center;
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin-top: 100px;
 }
 
-/* Stile degli articoli */
 .recipes article {
     flex: 1 1 300px;
     max-width: 350px;
@@ -123,14 +165,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     height: 400px;
+    overflow: hidden;
 }
 
-/* Effetto hover sugli articoli */
 .recipes article:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Stile delle immagini */
 .recipes img {
     width: 100%;
     max-width: 180px;
@@ -139,7 +180,6 @@ body {
     object-fit: cover;
 }
 
-/* Stile dei titoli delle ricette */
 .recipes h2 {
     font-size: 24px;
     color: #ff7b009c;
@@ -147,7 +187,6 @@ body {
     margin: 10px 0;
 }
 
-/* Stile del testo delle ricette */
 .recipes p {
     font-size: 16px;
     color: #7f8c8d;
@@ -161,10 +200,77 @@ body {
     padding-bottom: 40px;
 }
 
-/* Stile dei Link */
 .recipes a {
     display: flex;
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+/* Media Queries compatte per zoom e dispositivi */
+
+/* Dispositivi mobili e tablet */
+@media (max-width: 1024px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .recipes article {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .NavBar-container {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .HugeHeader {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .recipes {
+        margin-top: 80px;
+    }
+
+    .recipes article {
+        padding: 15px;
+    }
+
+    .recipes img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Gestione Zoom (125%-300%) e dispositivi desktop */
+@media (min-width: 1025px) {
+    .HugeHeader {
+        padding-top: 50px;
+    }
+
+    .recipes {
+        margin-top: 120px;
+    }
+
+    .recipes article {
+        max-width: 350px;
+    }
+
+    .recipes img {
+        max-width: 180px;
+    }
+}
+
+/* Zoom al 300% o più (desktop) */
+@media (min-width: 1500px) {
+    .HugeHeader {
+        padding-top: 70px;
+    }
+
+    .recipes {
+        margin-top: 140px;
+    }
 }
